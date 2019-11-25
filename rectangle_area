@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Rectangle_Application
+{
+    class Rectangle
+    {
+        private double length;
+        private double breadth;
+
+        public void set()
+        {
+            Console.WriteLine("Enter Length:");
+            length = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter breadth:");
+            breadth = Convert.ToDouble(Console.ReadLine());
+        }
+
+        public double GetArea()
+        {
+            return length * breadth;
+        }
+
+    }
+    class ExecuteRectangle
+    {
+        static void Main(string[] args)
+        {
+            Rectangle r = new Rectangle();
+            r.set();
+            Console.WriteLine("Area is {0}", r.GetArea());
+
+        }
+    }
+}
